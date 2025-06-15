@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      href="./img/LinkedIn_icon.svg.webp"
+      type="image/x-icon"
+    />
+    <!-- Bootstrap CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+      integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"
+      crossorigin="anonymous"
+    />
+    <!-- Font Awesome Link -->
+    <script
+      src="https://kit.fontawesome.com/d2389ef020.js"
+      crossorigin="anonymous"
+    ></script>
+    <!-- Google Symbols Link -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined"
+      rel="stylesheet"
+    />
+    <!-- Style CSS -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Linkedin Clone</title>
+  </head>
+
+ <!-- ================================================ -->
+
+  <body >
+    <!-- HEADER | START -->
+    <header
+      class="container-fluid d-flex justify-content-around fixed-top shadow-sm mb-1"
+    >
+      <!-- Logo - Searchbar Div -->
+      <div class="d-flex py-2 ml-0 ml-lg-4 mr-sm-auto mr-lg-0">
+        <!-- Logo -->
+        <div class="logo-div align-self-center mx-2 my-0 py-0">
+          <img
+            class=""
+            src="./img/LinkedIn_icon.svg.webp"
+            alt="linkedin-logo"
+          />
+        </div>
+        <!-- Searchbar -->
+        <div class="search position-relative d-none d-md-block ">
+          <i
+            class="fa-solid fa-magnifying-glass d-inline-block position-absolute font-weight-bold"
+          >  </i>
+          
+          <input
+            class="h-100 px-5 rounded-lg border-0 d-inline-block "
+            type="text"
+            placeholder="Arama yap"
+          />
+        </div>
+        <!-- Searc İco Responsive -->
+        <div class="d-block d-md-none d-sm-block search-ico">
+          <i class="fa-solid fa-magnifying-glass p-0 m-0"></i>
+          <span class="d-none d-sm-inline">Arama</span>
+        </div>
+      </div>
+      <!-- Header Icons -->
+      <nav class="header-icons d-flex py-1 px-lg-4 align-items-end ">
+        <!-- Home -->
+        <div
+          class="icon icon-first d-flex flex-column justify-content-center align-items-center mr-sm-2 mr-md-4"
+        >
+          <i class="fa-solid fa-house icon-i"></i>
+          <span class="icon-text">Ana Sayfa</span>
+        </div>
+        <!-- Ağım -->
+        <div
+          class="icon d-flex flex-column justify-content-center align-items-center mr-sm-2 mr-md-4"
+        >
+          <span class="material-symbols-outlined icon-i"> group </span>
+          <span class="icon-text ">Ağım</span>
+        </div>
+        <!-- İş İlanları -->
+        <div
+          class="icon d-flex flex-column justify-content-center align-items-center mr-sm-2 mr-md-4"
+        >
+          <i class="fa-solid fa-suitcase icon-i"></i>
+          <span class="icon-text ">İş İlanları</span>
+        </div>
+        <!-- Mesajlaşma -->
+        <div
+          class="icon d-flex flex-column justify-content-center align-items-center mr-sm-2 mr-md-4"
+        >
+          <span class="material-symbols-outlined icon-i"> sms </span>
+          <span class="icon-text ">Mesajlaşma</span>
+        </div>
+        <!-- Bildirimler -->
+        <div
+          class="icon d-flex flex-column justify-content-center align-items-center mr-sm-2 mr-md-4"
+        >
+          <i class="fa-solid fa-bell icon-i"></i>
+          <span class="icon-text ">Bildirimler</span>
+        </div>
+        <!-- Profil -->
+        <div
+          class="header-img d-flex flex-column justify-content-center align-items-center mr-sm-3 mr-0 pr-0 border-right pr-sm-3"
+        >
+          <a href="https://www.linkedin.com/in/tunahan-yasar/"
+            ><img src="./img/profile-pic.png" alt="profile-pic"
+          /></a>
+          <a
+            class="icon-text text-decoration-none"
+            href="https://www.linkedin.com/in/tunahan-yasar/"
+            >Ben<i class="fa-solid pl-1 fa-caret-down"></i
+          ></a>
+        </div>
+        <!-- Header's End Side -->
+        <div class="d-flex align-items-end">
+          <!-- Grid: İş için -->
+          <div
+            class="grid-icon d-flex flex-column align-items-center mr-4 icon"
+          >
+            <span class="material-symbols-outlined icon-i"> apps </span>
+            <span class="icon-text "
+              >İş için <i class="fa-solid fa-caret-down"></i
+            ></span>
+          </div>
+          <!-- Premium Link -->
+          <div class="premium w-50 text-center d-sm-none d-lg-block">
+            <a
+              href="https://www.linkedin.com/premium/survey/?destRedirectURL=https%3A%2F%2Fwww.linkedin.com%2Ffeed%2F&referenceId=%2BQk4Guw7SyOa3Q8X%2FpOHtg%3D%3D&upsellOrderOrigin=premium_nav_upsell_text"
+              >0 TRY ile Premium'u deneyin</a
+            >
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- HEADER | END -->
+
+    <!-- ================================================ -->
+
+    <!-- ================= GLOBAL CONTAINER START ================= -->
+    <div class="global container-fluid mb-5 ">
+      <div class="row">
+        <!-- LEFT ASIDE | START -->
+        <aside class="left-aside col-12 col-sm-4  col-lg-3 col-xl-2 offset-lg-0 offset-xl-1 offset-sm-0 order-sm-1 ">
+          <!-- Top Card -->
+          <div
+            class="bg-white rounded-lg p-3 d-flex flex-column aside-top-card"
+          >
+            <img
+              class="mt-4 mb-2"
+              src="./img/profile-pic.png"
+              width="90"
+              alt="card-pic"
+            />
+            <div class="d-flex flex-column">
+              <h5>Tunahan Yaşar</h5>
+              <span>Jr. Frontend Developer</span>
+              <span class="text-muted mb-2">İstanbul, İstanbul</span>
+              <div class="d-flex align-items-center">
+                <img
+                  class="rounded-circle"
+                  src="./img/patika.dev.png"
+                  alt="patika-dev"
+                  width="30"
+                />
+                <span class="ml-1 patika">Patika.dev</span>
+              </div>
+            </div>
+          </div>
+          <!-- Middle Card 1# -->
+          <div
+            class="bg-white rounded-lg p-3 d-flex flex-column mt-2 aside-middle-card-1"
+          >
+            <span class="mb-2"
+              >Profil görüntüleyenler <span class="float-right">173</span></span
+            >
+            <span
+              >Gönderi gösterimi sayısı
+              <span class="float-right">420</span></span
+            >
+          </div>
+          <!-- Middle Card 2# -->
+          <div
+            class="bg-white rounded-lg p-3 d-flex flex-column mt-2 aside-middle-card-2"
+          >
+            <p class="text-muted m-0 mb-1">
+              Premium ile profesyonel ağınızı daha akıllıca genişletin
+            </p>
+            <div class="d-flex align-items-baseline">
+              <i class="fa-solid fa-credit-card ml-1 mr-1"></i>
+              <p class="m-0">
+                Premium'u 1 ay boyunca 0 TRY karşılığında deneyin
+              </p>
+            </div>
+          </div>
+          <!-- Last Card -->
+          <div
+            class="bg-white rounded-lg py-2 d-flex flex-column mt-2 last-card "
+          >
+            <div class="d-flex align-items-center text-center p-2">
+              <i
+                class="fa-solid fa-bookmark mr-3 d-flex justify-content-center align-items-center last-ico"
+              ></i>
+              <a href="#">Kaydedilen öğeler</a>
+            </div>
+            <div class="d-flex align-items-center text-center p-2">
+              <i
+                class="fa-solid fa-user-group mr-3 d-flex justify-content-center align-items-center last-ico"
+              ></i>
+              <a href="#">Gruplar</a>
+            </div>
+            <div class="d-flex align-items-center text-center p-2">
+              <i
+                class="fa-solid fa-newspaper mr-3 d-flex justify-content-center align-items-center last-ico"
+              ></i>
+              <a href="#">Haber bültenleri</a>
+            </div>
+            <div class="d-flex align-items-center text-center p-2">
+              <i
+                class="fa-solid fa-calendar-days mr-3 d-flex justify-content-center align-items-center last-ico"
+              ></i>
+              <a href="#">Etkinlikler</a>
+            </div>
+          </div>
+        </aside>
+        <!-- LEFT ASIDE | END -->
+
+        <!-- ================================================ -->
+
+        <!-- MAIN | START  -->
+        <main class="middle-side col-12 col-sm-8   col-lg-6 col-xl-5 order-sm-2 mt-4 mt-sm-0 ">
+          <!--  Top Card - Start -->
+          <section
+            class="middle-top-card bg-white rounded px-3 pt-3 pb-1 flex-column mb-3  "
+          >
+            <div class="d-flex">
+              <img src="img/profile-pic.png" alt="profile-pic" width="50" />
+              <input
+                class="border rounded-pill ml-3 w-100"
+                type="text"
+                placeholder="Gönderi başlatın"
+              />
+            </div>
+            <!-- Card Footer icons -->
+            <div class="footer-icons d-flex justify-content-around mt-2">
+              <div class="d-flex p-2 py-2">
+                <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="#70B5F9" width="24" height="24" focusable="false">
+                  <path d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm1 13a1 1 0 01-.29.71L16 14l-2 2-6-6-4 4V7a1 1 0 011-1h14a1 1 0 011 1zm-2-7a2 2 0 11-2-2 2 2 0 012 2z"></path>
+                </svg>
+                <span>Fotoğraf</span>
+              </div>
+              <div class="d-flex p-2 py-2">
+                <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="#7FC15E" width="24" height="24" focusable="false">
+                  <path d="M19 4H5a3 3 0 00-3 3v10a3 3 0 003 3h14a3 3 0 003-3V7a3 3 0 00-3-3zm-9 12V8l6 4z"></path>
+                </svg>
+                <span>Video</span>
+              </div>
+              <div class="d-flex p-2 py-2">
+                <svg class="mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" data-supported-dps="24x24" fill="#F5987E" width="24" height="24" focusable="false">
+                  <path d="M21 3v2H3V3zm-6 6h6V7h-6zm0 4h6v-2h-6zm0 4h6v-2h-6zM3 21h18v-2H3zM13 7H3v10h10z"></path>
+                </svg>
+                <span>Yazı yaz</span>
+              </div>
+            </div>
+          </section>
+          <!--  Top Card - End -->
+
+          <!-- =========================== -->
+
+          <!-- Post Cards - Start -->
+          <section class="post-cards">
+            <!-- Post card #1 -->
+            <article class="post-card bg-white rounded d-flex flex-column">
+              <!-- Card Heading User - Start -->
+              <div class="user container p-3 m-0">
+                <div class="row">
+                  <div class="col-2 d-flex flex-column">
+                    <img
+                      class="rounded-circle"
+                      src="https://randomuser.me/api/portraits/men/79.jpg"
+                      alt="random-pic"
+                      width="60"
+                    />
+                  </div>
+                  <div class="user-title col-8 d-flex flex-column pl-3 pl-md-2 pl-sm-3 pl-lg-0 p-0 m-0">
+                    <h6 class="p-0 m-0">John Doe</h6>
+
+                    <span class="text-muted p-0 m-0"
+                      >Software Engineering Student
+                    </span>
+                    <span class="text-muted"
+                      >7 saat <span class="font-weight-bolder">.</span
+                      ><i class="fa-solid fa-earth-americas ml-2"></i
+                    ></span>
+                  </div>
+                  <div class="user-icon col-2 d-flex justify-content-end p-0 pr-3 m-0"
+                  >
+                    <i class="fa-solid fa-ellipsis mr-4"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Card Heading User - End-->
+              <!-- Post Content - Start -->
+              <div class="post-content">
+                <p class="mx-4 p-0">
+                  Yeni bir sertifikaya hak kazandığımı paylaşmaktan mutluluk
+                  duyuyorum:
+                </p>
+                <img
+                  class="img-fluid border-bottom pb-3"
+                  src="./img/certificate.png"
+                  alt="certificate"
+                />
+
+                <!-- Footer Icons -->
+                <div
+                  class="post-footer-icon d-flex justify-content-around align-items-center m-3"
+                >
+                  <div
+                    class="d-flex justify-content-around align-items-center p-2"
+                  >
+                    <span class="material-symbols-outlined mr-2">
+                      thumb_up
+                    </span>
+                    <span class="d-none d-sm-block">Beğen</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around align-items-center p-2"
+                  >
+                    <span class="material-symbols-outlined mr-2">
+                      comment
+                    </span>
+                    <span class="d-none d-sm-block">Yorum Yap</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around align-items-center p-2"
+                  >
+                    <span class="material-symbols-outlined mr-2"> share </span>
+                    <span class="d-none d-sm-block">Paylaş</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around align-items-center p-2"
+                  >
+                    <span class="material-symbols-outlined mr-2"> send </span>
+                    <span class="d-none d-sm-block">Gönder</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Post Content - End -->
+            </article>
+            <!-- Post card #2 -->
+            <article class="post-card bg-white rounded d-flex flex-column mt-3">
+              <!-- Card Heading User - Start -->
+              <div class="user container p-3 m-0">
+                <div class="row">
+                  <div class="col-2 d-flex flex-column">
+                    <img
+                      class="rounded-circle"
+                      src="./img/patika.dev.png"
+                      alt="random-pic"
+                      width="60"
+                    />
+                  </div>
+                  <div class="user-title col-8 d-flex flex-column pl-3 pl-md-2 pl-sm-3 pl-lg-0 p-0 m-0"">
+                    <h6 class="p-0 m-0">Patika.dev</h6>
+
+                    <span class="text-muted p-0 m-0"
+                      >95.277 takipçi
+                    </span>
+                    <span class="text-muted"
+                      >2 hafta <span class="font-weight-bolder">.</span
+                      ><i class="fa-solid fa-earth-americas ml-2"></i
+                    ></span>
+                  </div>
+                  <div
+                    class="user-icon col-2 d-flex justify-content-end p-0 pr-3 m-0"
+                  >
+                    <i class="fa-solid fa-ellipsis mr-4"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Card Heading User - End-->
+              <!-- Post Content - Start -->
+              <div class="post-content">
+                <p class="mx-4 p-0">
+                  Mobil dünyada güçlü bir kariyere adım atmak için en çok tercih edilen teknolojilerden biri olan React Native ile yetkinlik kazanmaya hazır mısın? 💻 <br> <br>
+                  Detaylar için linke tıkla: <span class="patika-tag"> https://patika.info.com </span>
+                </p>
+                <div class="d-flex position-relative border-bottom pb-3">
+                  <img class="pr-1 w-50 img-fluid" src="img/patika-post.jpeg" alt="">
+                  <img class=" img-fluid w-50" src="img/patika-post-2.jpeg" alt="">
+                </div>
+                
+
+                <!-- Footer Icons -->
+                <div
+                  class="post-footer-icon d-flex justify-content-around align-items-center m-3"
+                >
+                  <div
+                    class="d-flex justify-content-around align-items-center p-2"
+                  >
+                    <span class="material-symbols-outlined mr-2">
+                      thumb_up
+                    </span>
+                    <span class="d-none d-sm-block">Beğen</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around align-items-center p-2"
+                  >
+                    <span class="material-symbols-outlined mr-2">
+                      comment
+                    </span>
+                    <span class="d-none d-sm-block">Yorum Yap</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around align-items-center p-2"
+                  >
+                    <span class="material-symbols-outlined mr-2"> share </span>
+                    <span class="d-none d-sm-block">Paylaş</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around align-items-center p-3"
+                  >
+                    <span class="material-symbols-outlined mr-2"> send </span>
+                    <span class="d-none d-sm-block">Gönder</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Post Content - End -->
+            </article>
+            <!-- Post card #3 -->
+            <article class="post-card bg-white rounded d-flex flex-column mt-3">
+              <!-- Card Heading User - Start -->
+              <div class="user container p-3 m-0">
+                <div class="row">
+                  <div class="col-2 d-flex flex-column">
+                    <img
+                      class="rounded-circle"
+                      src="https://randomuser.me/api/portraits/men/46.jpg"
+                      alt="random-pic"
+                      width="60"
+                    />
+                  </div>
+                  <div class="user-title col-8 d-flex flex-column pl-3 pl-md-2 pl-sm-3 pl-lg-0 p-0 m-0">
+                    <h6 class="p-0 m-0">Fredric Burton</h6>
+
+                    <span class="text-muted p-0 m-0"
+                      >Frontend Technical Coordinator - Patika.dev
+                    </span>
+                    <span class="text-muted"
+                      >3 hafta <span class="font-weight-bolder">.</span
+                      ><i class="fa-solid fa-earth-americas ml-2"></i
+                    ></span>
+                  </div>
+                  <div
+                    class="user-icon col-2 d-flex justify-content-end p-0 pr-3 m-0"
+                  >
+                    <i class="fa-solid fa-ellipsis mr-4"></i>
+                    <i class="fa-solid fa-xmark"></i>
+                  </div>
+                </div>
+              </div>
+              <!-- Card Heading User - End-->
+              <!-- Post Content - Start -->
+              <div class="post-content">
+                <p class="mx-4 p-0">
+                  <span class="patika-tag">Patika.dev</span> şirketinde Teknik Koordinatör olarak çalışmaya başladığımı paylaşmaktan mutluluk duyuyorum! 🥳🎉
+                </p>
+                <img
+                  class="img-fluid border-bottom pb-3"
+                  src="./img/patika-post-3.gif"
+                  alt="certificate"
+                />
+
+                <!-- Footer Icons -->
+                <div
+                  class="post-footer-icon d-flex justify-content-around align-items-center m-3"
+                >
+                  <div
+                    class="d-flex justify-content-around align-items-center p-2"
+                  >
+                    <span class="material-symbols-outlined mr-2">
+                      thumb_up
+                    </span>
+                    <span class="d-none d-sm-block">Beğen</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around align-items-center p-2"
+                  >
+                    <span class="material-symbols-outlined mr-2">
+                      comment
+                    </span>
+                    <span class="d-none d-sm-block">Yorum Yap</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around align-items-center p-2"
+                  >
+                    <span class="material-symbols-outlined mr-2"> share </span>
+                    <span class="d-none d-sm-block">Paylaş</span>
+                  </div>
+                  <div
+                    class="d-flex justify-content-around align-items-center p-2"
+                  >
+                    <span class="material-symbols-outlined mr-2"> send </span>
+                    <span class="d-none d-sm-block">Gönder</span>
+                  </div>
+                </div>
+              </div>
+              <!-- Post Content - End -->
+            </article>
+          </section>
+          <!-- Post Cards - End -->
+           <div class="more d-flex rounded-pill justify-content-center mt-5 ">
+            <span class="text-center py-1 px-3">Daha fazla akış güncellemelerini göster</span>
+           </div>
+        </main>
+        <!-- MAIN | END  -->
+
+        <!-- ================================================ -->
+
+        <!-- RIGHT ASIDE | START -->
+        <aside class="right-side col-12 col-sm-8  col-lg-3 col-xl-3 offset-sm-4 offset-lg-0  order-sm-3  mt-5 mt-lg-0 ">
+          <!-- Haberler -->
+          <div class="bg-white d-flex flex-column rounded">
+            <div class="d-flex align-baseline justify-content-between">
+              <h5 class="px-3 pt-3">LinkedIn Haberler</h5>
+              <span class="material-symbols-outlined p-3">
+                info
+              </span>
+            </div>
+            <span class="text-muted px-3 mb-2 font-weight-bold">Öne çıkan hikayeler</span>
+            <div class="p-2 px-3">
+              <h6 class="m-0">Microsoft to shut down Skype</h6>
+              <span class="text-muted">2s önce . 221.454 okuyucu</span>
+            </div>
+            <div class="p-2 px-3">
+              <h6 class=" m-0">Citi nearly gifts client $81T</h6>
+              <span class="text-muted">2s önce . 32.852 okuyucu</span>
+            </div>
+            <div class="p-2 px-3">
+              <h6 class=" m-0">GrubHub lays off 23% of workforce</h6>
+              <span class="text-muted">2s önce . 4.234 okuyucu</span>
+            </div>
+            <div class="p-2 px-3">
+              <h6 class=" m-0">Blue Origin sets female space crew</h6>
+              <span class="text-muted">2s önce . 221.472 okuyucu</span>
+            </div>
+            <div class="p-2 px-3">
+              <h6 class=" m-0">Intel delays Ohio facility to 2030</h6>
+              <span class="text-muted">2s önce . 22.454 okuyucu</span>
+            </div>
+            <div class="p-2 px-3 mb-2">
+              <h6 class=" m-0">Google co-founder urges office work</h6>
+              <span class="text-muted">2s önce . 84.480 okuyucu</span>
+            </div>
+            <div class="">
+            <span class="d-inline-block show-more d-inline-flex align-items-center mx-1 px-2 mb-4">Daha fazla göster<span class="material-symbols-outlined align-self-end">
+              keyboard_arrow_down
+              </span></span>
+            </div>
+          </div>
+          <!-- Ekler -->
+           <div class="addings d-flex flex-wrap align-content-around justify-content-around w-75 ml-auto mr-auto mt-4 position-sticky">
+              <a href="#" class="mt-2 mr-2 text-ce ml-2">Hakkında</a>
+              <a href="#" class="mt-2 mr-2 text-ce ml-2">Erişilebilirlik</a>
+              <a href="#" class="mt-2 mr-2 text-ce ml-2">Yardım Merkezi</a>
+              <a href="#" class="mt-2 mr-2 text-ce ml-2">Gizlilik ve Koşullar </a>
+            <a href="#" class="mt-2 mr-2 text-ce ml-2">Reklam Tercihleri</a>
+            <a href="#" class="mt-2 mr-2 text-ce ml-2">Reklam</a>
+            <a href="#" class="mt-2 mr-2 text-ce ml-2">Ticari Hizmetler </a>
+            <a href="#" class="mt-2 mr-2 text-ce ml-2">LinkedIn uygulamasını yükle</a>
+            <a href="#" class="mt-2 mr-2 text-ce ml-2">Daha Fazla</a>
+            <span class="mt-3 d-flex align-items-center"><img class="" src="./img/LinkedIn-Logo.wine.png" width="80" alt="logo"> LinkedIn Clone Project &copy; 2025 | Tunahan Yaşar</span>
+          
+           </div>
+        </aside>
+        <!-- RIGHT ASIDE  | END -->
+      </div>
+    </div>
+    <!-- ================= GLOBAL CONTAINER END ================= -->
+
+    <!-- FIXED BOTTOM CHAT | START -->
+    <div class="bg-white fixed-chat d-none d-md-block">
+      <div class="message p-2 d-flex align-items-center justify-content-between">
+        <div>
+          <img class="mr-2" src="./img/profile-pic.png" width="40" alt="profile">
+          <span class="font-weight-bold">Mesajlaşma</span>
+        </div>
+        <div class="message-ico">
+          <span class="material-symbols-outlined mr-1 p-2 rounded-circle">more_horiz</span>
+          <span class="material-symbols-outlined mr-1 p-2 rounded-circle">edit_square</span>
+          <span class="material-symbols-outlined mr-1 p-2 rounded-circle">keyboard_arrow_up</span>
+        </div>
+      </div>
+    </div>
+    <!-- FIXED BOTTOM CHAT | END -->
+    
+
+    <!-- ================== BOOTSTRAP JS ======================== -->
+    <script
+      src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+      integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>

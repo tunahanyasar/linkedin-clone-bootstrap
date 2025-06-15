@@ -1,0 +1,318 @@
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+
+}
+
+body {
+    background-color: #F4F2EE;
+}
+
+.global{
+    margin-top: 80px !important;
+}
+
+/* ================================== */
+
+/* HEADER START */
+header {
+    background-color: #FFFFFF;
+    height: 54px !important;
+    z-index: 10;
+
+}
+.logo-div img{
+    width: 35px;
+    height: 35px;
+}
+.search input{
+    background-color: #EDF3F8;
+}
+.search input::placeholder{
+    color: black;
+    font-weight: 100;
+}
+.fa-solid.fa-magnifying-glass{
+    padding: 10px 10px 10px 15px;
+}
+.search-ico {
+    display: flex;
+    flex-direction: row;
+    align-items:end;
+    flex: wrap ;
+    padding: 0;
+    margin: 7px;
+    gap: 10px;
+}
+.search-ico span{
+    padding-bottom: -30px;
+    font-size: 12px;
+    font-family: sans-serif;
+    font-weight: 100;
+    padding-top: 10px;
+}
+/* Header Icon Grup */
+.header-icons img{
+    width: 25px;
+    height: 25px;
+}
+.icon-i{
+    font-size: 20px;
+    color: dimgray;
+    transition: color 0.3s ease;
+    cursor: pointer;
+}
+.icon-text{
+    transition: 0.3s ease;
+    cursor: pointer;
+    color: gray;
+    font-size: 14px;
+}
+.icon:hover .icon-i, .icon:hover .icon-text {
+    color: black; 
+  }
+  .icon-text:hover{
+    color: black;
+  }
+
+.icon-first i, .icon-first span{
+    color: black;
+
+}
+.icon span.icon-i{
+    font-size: 25px;
+    padding: 0;
+}
+
+/* Header End Side */
+.premium a{
+    text-decoration: underline;
+    color: goldenrod;
+    font-size: 12px;
+}
+.premium a:hover{
+    color: rgb(128, 98, 25);
+}
+.grid-icon .icon-i{
+    font-size: 30px;
+}
+/* Header İcons Responsive Query */
+@media (max-width: 600px) {
+    .header-icons {
+      width: 100%;
+      align-items: center !important;
+      justify-content: space-around;
+    }
+  
+    .header-icons .icon {
+      margin: 0; 
+    }
+    .header-img{
+        border-right: none !important;
+        
+    }
+    .icon-text {
+      display: none; /* İkon altındaki metinleri kaldır */
+    }
+  
+    .profile-pic,
+    .grid-icon,
+    .premium {
+      display: none !important; /* Profil, grid ve premium link gizlenecek */
+    }
+  }
+/* HEADER END */
+
+/* ================================== */
+
+/* ASIDE LEFT | START*/
+/* Aside top card */
+.aside-top-card{
+    background-image: url("./img/banner.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+    background-position: top;
+}
+span.patika{
+    font-weight: 500;
+    font-size: 14px;
+}
+/* Aside middle card 1 */
+.aside-middle-card-1{
+    font-size: 14px;
+    font-weight: 500;
+}
+.aside-middle-card-1 span span:nth-child(1){
+ color: #0A94DD;
+}
+/* Aside middle card 2 */
+.aside-middle-card-2 p{
+    font-size:  13px !important;
+}
+.fa-credit-card{
+    color: rgb(183, 137, 22);
+}
+.fa-credit-card~p{
+    font-weight: 500;
+}
+/* Last card */
+.last-ico{
+    font-size: 14px;
+    width: 24px;
+}
+.last-ico~a{
+    color: black !important;
+    font-size: 13px;
+    font-weight: 500;
+}
+/* ASIDE LEFT | END */
+
+/* ================================== */
+
+/* MAIN | START */
+/* Middle top card */
+.middle-top-card input::placeholder{
+    padding: 0 0 0 20px;
+    color: slategray;
+    font-weight: 500;
+}
+.middle-top-card input{
+    transition: background 0.3s ease;
+}
+.middle-top-card input:hover{
+    background-color: #F3F3F3;
+}
+.footer-icons div {
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.footer-icons div:hover{
+background-color: rgb(240, 240, 240);
+}
+
+/* Post Cards */
+.user-title span{
+    font-size: 12px;
+}
+.user-icon{
+    color: gray;
+    font-size: 20px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.user-icon i:hover{
+    transform: scale(1.1);
+}
+.post-footer-icon .material-symbols-outlined{
+    color: gray;
+    cursor: pointer;
+}
+.post-footer-icon div{
+    transition: background 0.3s ease;
+    cursor: pointer;
+    border-radius: 10px;
+}
+.post-footer-icon div:hover {
+    background-color: rgb(222, 222, 222);
+}
+.patika-tag{
+    color: #0A94DD;
+    font-weight: 500;
+}
+.patika-tag:hover{
+    text-decoration: underline;
+    cursor: pointer;
+}
+.more{
+    border: 2px solid black;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.more:hover{
+    background-color: dimgray;
+    color: white;
+}
+/* MAIN | END */
+
+/* ================================== */
+
+/* ASIDE RIGHT | START */
+.right-side div div:not(:nth-child(1),:last-child){
+transition: background 0.3s ease;
+cursor: pointer;
+}
+.right-side div div:hover:not(:nth-child(1),:last-child){
+    background-color: #EBEBEB;
+}
+.show-more{
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s ease;
+    border-radius: 10px;
+}
+.show-more:hover{
+    background-color: #EBEBEB
+}
+.addings a{
+    font-size: 13px;
+    color: gray;
+}
+.addings a:hover{
+    color: skyblue;
+}
+.addings {
+    top: 0; 
+    padding-top: 60px; 
+  }
+.right-side div h5~.material-symbols-outlined{
+    cursor: pointer;
+    font-size: 20px;
+}
+/* ASIDE RIGHT | END */
+
+/* CHAT | START*/
+.fixed-chat {
+    position: fixed;
+    bottom: 0; /* Sayfanın en altına sabitlemek için */
+    right: 20px; 
+    width: 300px; 
+    border-radius: 10px 10px 0 0;
+  }
+.message{
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+.message:hover{
+    background-color: rgb(242, 246, 247);
+}
+.message-ico span{
+    cursor: pointer;
+    transition: background 0.3s ease;
+    font-size: 20px;
+}
+.message-ico span:hover{
+    background-color: rgb(231, 231, 231);
+}
+/* CHAT | END*/
+
+/* @media (min-width: 200px) and (max-width: 425px) {
+    .aside-top-card{
+        background-size: 100% 40%;
+  }
+} 
+@media (min-width: 576px) and (max-width: 768px) {
+    .aside-top-card{
+        background-size: 130% 30%;
+  }
+}
+@media (min-width: 770px) and (max-width: 1447px) {
+    .aside-top-card{
+        background-size: 100% 30%;
+  }
+} */
+
+
+
