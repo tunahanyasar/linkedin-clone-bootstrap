@@ -12,7 +12,7 @@
 
 ## 🌐 Canlı Demo
 
-> (Canlı demo linki ekleyebilirsiniz)
+Canlı web sitesini ziyaret edin: [LinkedIn Clone - Bootstrap](https://linkedin-clone-bootstrap.vercel.app/)
 
 ---
 

@@ -12,7 +12,7 @@
 
 ## 🌐 Live Demo
 
-> (You can add a live demo link here)
+Visit the live website: [LinkedIn Clone - Bootstrap](https://linkedin-clone-bootstrap.vercel.app/)
 
 ---
 
